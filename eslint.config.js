@@ -5,6 +5,10 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 
 export default [
+  {
+    ignores: ['dist/**', 'node_modules/**'],
+  },
+
   js.configs.recommended,
 
   reactPlugin.configs.flat.recommended,
