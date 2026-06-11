@@ -48,6 +48,23 @@ Training project built during internship for practicing modern frontend developm
 - Pull Request workflow
 - Production deployment
 
+## Authentication
+
+The application uses the DummyJSON authentication API.
+
+Test credentials from DummyJSON:
+
+- Username: `emilys`
+- Password: `emilyspass`
+
+Authentication features:
+
+- Username and password validation before form submission.
+- Password visibility toggle.
+- Inline validation error messages.
+- Authentication error notifications.
+- Session persistence after page refresh.
+
 ## How to Run Project
 
 Install dependencies:

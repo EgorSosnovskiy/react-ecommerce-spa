@@ -32,14 +32,7 @@ API provider:
 
 Reference:
 
-- Material UI based form
-- Rounded input fields
-- Page title
-- Username field
-- Password field with visibility toggle
-- Login button
-
-UI mockup will be added during implementation.
+![Login Page UI](../images/login-page.png)
 
 ---
 
@@ -127,7 +120,7 @@ After successful authentication:
 
 #### AC-6.1
 
-Authentication session is restored after page refresh.
+Authenticated user remains logged in after page refresh.
 
 #### AC-6.2
 
