@@ -12,7 +12,7 @@ import NotFoundPage from '../modules/common/pages/NotFoundPage.jsx';
 export const router = createBrowserRouter([
   {
     path: ROUTES.HOME,
-    Component: LoginPage,
+    Component: CatalogPage,
   },
   {
     path: ROUTES.LOGIN,

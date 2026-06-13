@@ -32,7 +32,25 @@ export default {
         use: 'babel-loader',
       },
       {
+        test: /\.module\.css$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              esModule: true,
+              modules: {
+                localIdentName: '[name]__[local]__[hash:base64:5]',
+                namedExport: false,
+              },
+            },
+          },
+        ],
+      },
+
+      {
         test: /\.css$/i,
+        exclude: /\.module\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
     ],
