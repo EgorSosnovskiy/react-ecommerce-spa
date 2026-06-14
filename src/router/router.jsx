@@ -1,9 +1,8 @@
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter, Navigate } from 'react-router';
 
 import { ROUTES } from '../shared/constants/routes.js';
 
 import LoginPage from '../modules/auth/pages/LoginPage.jsx';
-
 import CatalogLayout from '../modules/products/pages/CatalogLayout.jsx';
 import CatalogPage from '../modules/products/pages/CatalogPage.jsx';
 import ProductDetailsPage from '../modules/products/pages/ProductDetailsPage.jsx';
@@ -12,7 +11,7 @@ import NotFoundPage from '../modules/common/pages/NotFoundPage.jsx';
 export const router = createBrowserRouter([
   {
     path: ROUTES.HOME,
-    Component: CatalogPage,
+    element: <Navigate to={ROUTES.CATALOG} replace />,
   },
   {
     path: ROUTES.LOGIN,

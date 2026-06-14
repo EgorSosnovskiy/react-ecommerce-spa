@@ -1,0 +1,7 @@
+.categoryButton {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 600;
+}
