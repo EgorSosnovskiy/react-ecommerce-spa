@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  text-decoration: none;
+
+  gap: 12px;
+  font-size: 14px;
+}
+
+.navigation a {
+  color: white;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #ffffff45;
+  text-decoration: none;
+}

@@ -1,0 +1,49 @@
+.tabs {
+  display: inline-flex;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 999px;
+
+  margin: 6px;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+.tab {
+  border: none;
+  background: transparent;
+
+  padding: 8px 8px;
+
+  font-size: 14px;
+  color: #444;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.tab:not(:last-child) {
+  border-right: 1px solid #e5e5e5;
+}
+
+.tab:hover {
+  background: #f7f7f7;
+}
+
+.active {
+  background: #fafafa;
+
+  color: #e85f68;
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .tab {
+    padding: 12px 24px;
+  }
+}

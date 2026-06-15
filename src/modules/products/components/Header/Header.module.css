@@ -1,0 +1,55 @@
+.header {
+  background-color: #d4434f;
+}
+
+.container {
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 6px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+
+  font-size: 30px;
+}
+
+.logoIcon {
+  margin-right: 10px;
+}
+
+.logoText {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.logoText p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+
+    grid-template-columns:
+      auto
+      minmax(200px, 280px)
+      1fr
+      auto;
+
+    align-items: center;
+
+    gap: 24px;
+  }
+}

@@ -29,6 +29,7 @@ export default [
 
     rules: {
       ...reactHooks.configs.recommended.rules,
+      'react/prop-types': 'off',
     },
 
     settings: {

@@ -1,0 +1,33 @@
+.sort {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.label {
+  font-weight: 500;
+
+  color: #666666aa;
+}
+
+.option {
+  background: none;
+  border: none;
+
+  padding: 0;
+  margin-top: 4px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.option:hover {
+  color: #d32f2f;
+}
+
+.active {
+  color: #d32f2f;
+}
