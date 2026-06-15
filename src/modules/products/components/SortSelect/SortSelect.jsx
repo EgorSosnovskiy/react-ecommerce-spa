@@ -1,20 +1,26 @@
+import styles from './SortSelect.module.css';
+
 export default function SortSelect({ value, onChange }) {
   return (
-    <div>
-      <span>Sort by:</span>
+    <div className={styles.sort}>
+      <span className={styles.label}>Sort by:</span>
 
       <button
         type="button"
+        className={`${styles.option} ${
+          value === 'price-asc' ? styles.active : ''
+        }`}
         onClick={() => onChange('price-asc')}
-        aria-pressed={value === 'price-asc'}
       >
         Ascending price
       </button>
 
       <button
         type="button"
+        className={`${styles.option} ${
+          value === 'price-desc' ? styles.active : ''
+        }`}
         onClick={() => onChange('price-desc')}
-        aria-pressed={value === 'price-desc'}
       >
         Descending price
       </button>

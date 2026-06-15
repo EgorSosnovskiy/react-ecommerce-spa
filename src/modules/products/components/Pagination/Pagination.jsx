@@ -2,6 +2,8 @@ import PageSizeSelect from '../PageSizeSelect/PageSizeSelect.jsx';
 
 import { getPaginationPages } from '../../utils/getPaginationPages.js';
 
+import styles from './Pagination.module.css';
+
 export default function Pagination({
   currentPage,
   totalItems,
@@ -14,37 +16,45 @@ export default function Pagination({
   const pages = getPaginationPages(currentPage, totalPages);
 
   return (
-    <div>
-      <button
-        type="button"
-        disabled={currentPage === 1}
-        onClick={() => onPageChange(currentPage - 1)}
-      >
-        {'<'}
-      </button>
+    <div className={styles.pagination}>
+      <div className={styles.pages}>
+        <button
+          type="button"
+          className={styles.arrow}
+          disabled={currentPage === 1}
+          onClick={() => onPageChange(currentPage - 1)}
+        >
+          {'<'}
+        </button>
 
-      {pages.map((page, index) =>
-        page === '...' ? (
-          <span key={`dots-${index}`}>...</span>
-        ) : (
-          <button
-            key={page}
-            type="button"
-            disabled={page === currentPage}
-            onClick={() => onPageChange(page)}
-          >
-            {page}
-          </button>
-        ),
-      )}
+        {pages.map((page, index) =>
+          page === '...' ? (
+            <span key={`dots-${index}`} className={styles.dots}>
+              ...
+            </span>
+          ) : (
+            <button
+              key={page}
+              type="button"
+              className={`${styles.pageButton} ${
+                page === currentPage ? styles.active : ''
+              }`}
+              onClick={() => onPageChange(page)}
+            >
+              {page}
+            </button>
+          ),
+        )}
 
-      <button
-        type="button"
-        disabled={currentPage === totalPages}
-        onClick={() => onPageChange(currentPage + 1)}
-      >
-        {'>'}
-      </button>
+        <button
+          type="button"
+          className={styles.arrow}
+          disabled={currentPage === totalPages}
+          onClick={() => onPageChange(currentPage + 1)}
+        >
+          {'>'}
+        </button>
+      </div>
 
       <PageSizeSelect value={pageSize} onChange={onPageSizeChange} />
     </div>

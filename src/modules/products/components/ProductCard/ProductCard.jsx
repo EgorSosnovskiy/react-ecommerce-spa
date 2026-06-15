@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import { Link } from 'react-router';
+
 import { calculateDiscountPrice } from '../../utils/calculateDiscountPrice.js';
 
+import styles from './ProductCard.module.css';
+
 export default function ProductCard({ product }) {
+  const [isAdded, setIsAdded] = useState(false);
+
   const discountedPrice = calculateDiscountPrice(
     product.price,
     product.discountPercentage,
@@ -9,20 +15,51 @@ export default function ProductCard({ product }) {
 
   const hasDiscount = product.discountPercentage > 0;
 
+  const handleAddToCart = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    setIsAdded(true);
+  };
+
   return (
-    <Link to={`/catalog/${product.id}`}>
-      <article>
-        <img src={product.thumbnail} alt={product.title} width="200" />
+    <Link to={`/catalog/${product.id}`} className={styles.card}>
+      <article className={styles.cardContent}>
+        <div className={styles.imageContainer}>
+          <button type="button" className={styles.favoriteButton}>
+            ♡
+          </button>
 
-        <h3>{product.title}</h3>
+          <img
+            src={product.thumbnail}
+            alt={product.title}
+            className={styles.image}
+          />
 
-        <div>
-          <span>${discountedPrice}</span>
-
-          {hasDiscount && <span> ${product.price}</span>}
+          <div className={styles.ratingBadge}>⭐ {product.rating}</div>
         </div>
 
-        <p>⭐ {product.rating}</p>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{product.title}</h3>
+
+          <div className={styles.bottomRow}>
+            <div className={styles.priceContainer}>
+              <span className={styles.currentPrice}>${discountedPrice}</span>
+
+              {hasDiscount && (
+                <span className={styles.oldPrice}>${product.price}</span>
+              )}
+            </div>
+
+            <button
+              type="button"
+              className={`${styles.cartButton} ${isAdded ? styles.added : ''}`}
+              onClick={handleAddToCart}
+            >
+              {isAdded ? 'Added' : '🛒'}
+            </button>
+          </div>
+        </div>
       </article>
     </Link>
   );

@@ -1,0 +1,18 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666aa;
+}
+
+.separator {
+  color: #0c0c0c;
+  margin-top: 0px;
+  font-size: 18px;
+  font-weight: 600;
+}

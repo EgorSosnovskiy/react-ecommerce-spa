@@ -9,7 +9,7 @@ export default function useCatalogParams() {
     q: searchParams.get('q') || '',
     sort: searchParams.get('sort') || '',
     page: Number(searchParams.get('page')) || 1,
-    limit: Number(searchParams.get('limit')) || 10,
+    limit: Number(searchParams.get('limit')) || 12,
   };
 
   const updateParams = (updates) => {

@@ -1,0 +1,14 @@
+.select {
+  min-width: 60px;
+
+  margin-left: 16px;
+
+  padding: 8px;
+
+  border: 1px solid #e53835;
+  border-radius: 8px;
+
+  color: white;
+
+  background: #e53835;
+}

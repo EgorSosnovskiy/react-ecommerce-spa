@@ -1,0 +1,29 @@
+.footer {
+  background-color: #d4434f;
+}
+
+.container {
+  max-width: 1440px;
+
+  margin: 0;
+  padding: 8px;
+
+  gap: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container span {
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
