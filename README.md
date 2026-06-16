@@ -1,5 +1,7 @@
 # React E-Commerce SPA
 
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://react-ecommerce-spa-tau.vercel.app/)
+
 Training project built during internship for practicing modern frontend development.
 
 ## Tech Stack
