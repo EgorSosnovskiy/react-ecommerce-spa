@@ -2,14 +2,13 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
-
-import { useLoginMutation } from '../api/authApi';
-import { setCredentials } from '../store/authSlice';
-import { saveAuthData } from '../utils/authStorage';
-import { ROUTES } from '../../../shared/constants/routes';
-
 import { toast } from 'react-toastify';
 
+import { ROUTES } from 'shared/constants/routes';
+
+import { Icons } from '../../../shared/constants/icons.js';
+import { useLoginMutation } from '../api/authApi.js';
+import { createSession } from '../utils/authSession.js';
 import styles from './LoginForm.module.css';
 
 export default function LoginForm() {
@@ -28,8 +27,7 @@ export default function LoginForm() {
   const onSubmit = async (data) => {
     try {
       const user = await login(data).unwrap();
-      dispatch(setCredentials(user));
-      saveAuthData(user);
+      createSession(dispatch, user);
       navigate(ROUTES.CATALOG);
     } catch (error) {
       toast.error(error.data.message);
@@ -97,7 +95,7 @@ export default function LoginForm() {
             className={styles.passwordToggle}
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? '🔒' : '👁️'}
+            {showPassword ? Icons.lock : Icons.eye}
           </button>
         </div>
 

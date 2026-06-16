@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 
-import stateStyles from './states/State.module.css';
+import stateStyles from 'shared/components/State.module.css';
 
 export default function NotFoundPage() {
   return (

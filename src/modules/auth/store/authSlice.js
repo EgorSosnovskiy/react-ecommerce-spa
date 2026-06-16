@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import { getAuthData } from '../utils/authStorage.js';
 
 const initialState = {

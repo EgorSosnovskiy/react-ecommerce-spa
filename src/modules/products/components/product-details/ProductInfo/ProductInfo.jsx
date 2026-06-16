@@ -1,6 +1,5 @@
-import { formatCategoryName } from '../../../utils/formatCategoryName.js';
 import { renderRatingStars } from '../../../../../shared/utils/renderRatingStars.js';
-
+import { formatCategoryName } from '../../../utils/formatCategoryName.js';
 import styles from './ProductInfo.module.css';
 
 export default function ProductInfo({ product }) {

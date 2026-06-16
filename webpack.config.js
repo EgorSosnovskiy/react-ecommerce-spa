@@ -1,7 +1,6 @@
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +21,13 @@ export default {
 
   resolve: {
     extensions: ['.js', '.jsx'],
+
+    alias: {
+      modules: path.resolve(__dirname, 'src/modules'),
+      shared: path.resolve(__dirname, 'src/shared'),
+      pages: path.resolve(__dirname, 'src/pages'),
+      app: path.resolve(__dirname, 'src/app'),
+    },
   },
 
   module: {

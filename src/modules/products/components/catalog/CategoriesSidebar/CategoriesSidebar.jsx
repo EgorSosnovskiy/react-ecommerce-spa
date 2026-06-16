@@ -1,12 +1,12 @@
-import { useGetCategoriesQuery } from '../../../api/productsApi.js';
-
-import { formatCategoryName } from '../../../utils/formatCategoryName.js';
-
-import ErrorState from '../../../../../shared/components/states/ErrorState.jsx';
-import LoadingState from '../../../../../shared/components/states/LoadingState.jsx';
-
-import styles from './CategoriesSidebar.module.css';
 import { useState } from 'react';
+
+import { formatCategoryName } from 'modules/products/utils/formatCategoryName.js';
+import ErrorState from 'shared/components/ErrorState.jsx';
+import LoadingState from 'shared/components/LoadingState.jsx';
+
+import { Icons } from '../../../../../shared/constants/icons.js';
+import { useGetCategoriesQuery } from '../../../api/productsApi.js';
+import styles from './CategoriesSidebar.module.css';
 
 export default function CategoriesSidebar({
   selectedCategory,
@@ -22,7 +22,10 @@ export default function CategoriesSidebar({
   if (isLoading) {
     return (
       <aside className={styles.sidebar}>
-        <LoadingState variant="compact" message="⏳ Loading categories..." />
+        <LoadingState
+          variant="compact"
+          message={`${Icons.loading} Loading categories...`}
+        />
       </aside>
     );
   }
@@ -30,7 +33,7 @@ export default function CategoriesSidebar({
   if (error) {
     return (
       <aside className={styles.sidebar}>
-        <ErrorState message="⚠️ Failed to load categories. Please try again later." />
+        <ErrorState message="Failed to load categories. Please try again later." />
       </aside>
     );
   }

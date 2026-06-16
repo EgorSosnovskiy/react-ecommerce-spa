@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 
+import { Icons } from '../../../../../shared/constants/icons.js';
+import { renderRatingStars } from '../../../../../shared/utils/renderRatingStars.js';
 import { calculateOriginalPrice } from '../../../utils/calculateOriginalPrice.js';
-
 import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }) {
@@ -27,7 +28,7 @@ export default function ProductCard({ product }) {
       <article className={styles.cardContent}>
         <div className={styles.imageContainer}>
           <button type="button" className={styles.favoriteButton}>
-            ♡
+            {Icons.heart}
           </button>
 
           <img
@@ -36,7 +37,9 @@ export default function ProductCard({ product }) {
             className={styles.image}
           />
 
-          <div className={styles.ratingBadge}>⭐ {product.rating}</div>
+          <div className={styles.ratingBadge}>
+            {renderRatingStars(product.rating)}
+          </div>
         </div>
 
         <div className={styles.content}>
@@ -56,7 +59,7 @@ export default function ProductCard({ product }) {
               className={`${styles.cartButton} ${isAdded ? styles.added : ''}`}
               onClick={handleAddToCart}
             >
-              {isAdded ? 'Added' : '🛒'}
+              {isAdded ? 'Added' : Icons.cart}
             </button>
           </div>
         </div>

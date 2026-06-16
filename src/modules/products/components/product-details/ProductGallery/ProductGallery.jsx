@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { Icons } from '../../../../../shared/constants/icons.js';
 import styles from './ProductGallery.module.css';
 
 export default function ProductGallery({ images, title }) {
@@ -33,7 +34,7 @@ export default function ProductGallery({ images, title }) {
 
       <div className={styles.main}>
         <button className={styles.arrow} onClick={handlePrev}>
-          ←
+          {Icons.leftArrow}
         </button>
 
         <img
@@ -43,7 +44,7 @@ export default function ProductGallery({ images, title }) {
         />
 
         <button className={styles.arrow} onClick={handleNext}>
-          →
+          {Icons.rightArrow}
         </button>
       </div>
     </section>

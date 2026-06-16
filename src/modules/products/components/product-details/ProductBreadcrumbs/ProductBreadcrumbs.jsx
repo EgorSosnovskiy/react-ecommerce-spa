@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import { formatCategoryName } from '../../../utils/formatCategoryName.js';
-import { ROUTES } from '../../../../../shared/constants/routes.js';
 
+import { ROUTES } from '../../../../../shared/constants/routes.js';
+import { formatCategoryName } from '../../../utils/formatCategoryName.js';
 import styles from './ProductBreadcrumbs.module.css';
 
 export default function ProductBreadcrumbs({ product }) {

@@ -32,7 +32,7 @@ API provider:
 
 Reference:
 
-![Login Page UI](../images/login-page.png)
+![Login Page UI](../public/images/login-page.png)
 
 ---
 

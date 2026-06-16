@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
-import { logout } from '../../../auth/store/authSlice.js';
-import { clearAuthData } from '../../../auth/utils/authStorage.js';
+import { destroySession } from 'modules/auth';
 
+import { Icons } from '../../../../shared/constants/icons.js';
 import { ROUTES } from '../../../../shared/constants/routes.js';
-
 import styles from './HeaderActions.module.css';
 
 export default function HeaderActions() {
@@ -19,14 +18,13 @@ export default function HeaderActions() {
   };
 
   const handleLogout = () => {
-    dispatch(logout());
-    clearAuthData();
+    destroySession(dispatch);
   };
 
   return (
     <div className={styles.actions}>
-      <span>💖 0</span>
-      <span>👜 0</span>
+      <span>{Icons.favorites} 0</span>
+      <span>{Icons.cart} 0</span>
       {user ? (
         <button
           type="button"
@@ -34,7 +32,7 @@ export default function HeaderActions() {
           className={styles.actionButton}
           aria-label="Logout"
         >
-          🚪
+          {Icons.door}
         </button>
       ) : (
         <button
@@ -43,7 +41,7 @@ export default function HeaderActions() {
           className={styles.actionButton}
           aria-label="Login"
         >
-          🙎‍♂️
+          {Icons.human}
         </button>
       )}
     </div>

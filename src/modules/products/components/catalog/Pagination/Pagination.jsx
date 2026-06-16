@@ -1,7 +1,5 @@
-import PageSizeSelect from '../PageSizeSelect/PageSizeSelect.jsx';
-
 import { getPaginationPages } from '../../../utils/getPaginationPages.js';
-
+import PageSizeSelect from '../PageSizeSelect/PageSizeSelect.jsx';
 import styles from './Pagination.module.css';
 
 export default function Pagination({

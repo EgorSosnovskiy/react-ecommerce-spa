@@ -1,5 +1,4 @@
 import { formatCategoryName } from '../../../utils/formatCategoryName.js';
-
 import styles from './CatalogBreadcrumbs.module.css';
 
 export default function Breadcrumbs({ section, category }) {
