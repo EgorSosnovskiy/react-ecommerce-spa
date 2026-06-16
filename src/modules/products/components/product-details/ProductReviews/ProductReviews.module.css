@@ -1,0 +1,32 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 6px;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.list {
+  display: grid;
+
+  gap: 16px;
+}
+
+.empty {
+  border-radius: 12px;
+  color: #777;
+}
+
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+}

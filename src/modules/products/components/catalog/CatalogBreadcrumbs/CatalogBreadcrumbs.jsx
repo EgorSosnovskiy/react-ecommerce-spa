@@ -1,6 +1,6 @@
-import { formatCategoryName } from '../../utils/formatCategoryName.js';
+import { formatCategoryName } from '../../../utils/formatCategoryName.js';
 
-import styles from './Breadcrumbs.module.css';
+import styles from './CatalogBreadcrumbs.module.css';
 
 export default function Breadcrumbs({ section, category }) {
   return (

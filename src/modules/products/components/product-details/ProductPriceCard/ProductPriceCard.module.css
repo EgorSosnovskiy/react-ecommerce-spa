@@ -1,0 +1,122 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.price {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #222;
+}
+
+.oldPrice {
+  padding: 12px 0 0 0;
+
+  font-size: 20px;
+
+  color: #999;
+
+  text-decoration: line-through;
+}
+
+.discount {
+  width: fit-content;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  background: rgba(212, 67, 79, 0.12);
+
+  color: #d4434f;
+
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.addToCart,
+.buyNow {
+  border-radius: 18px;
+
+  padding: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.addToCart {
+  border: none;
+
+  background: #d4434f;
+
+  color: white;
+}
+
+.addToCart:hover {
+  opacity: 0.8;
+}
+
+.buyNow {
+  border: none;
+
+  background: #ea081b24;
+
+  color: #d4434f;
+}
+
+.buyNow:hover {
+  background: #f61e304e;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    position: sticky;
+
+    top: 24px;
+  }
+
+  .price {
+    font-size: 36px;
+  }
+
+  .oldPrice {
+    padding: 16px 0 0 0;
+  }
+}

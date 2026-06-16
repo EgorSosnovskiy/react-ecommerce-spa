@@ -1,6 +1,6 @@
 import PageSizeSelect from '../PageSizeSelect/PageSizeSelect.jsx';
 
-import { getPaginationPages } from '../../utils/getPaginationPages.js';
+import { getPaginationPages } from '../../../utils/getPaginationPages.js';
 
 import styles from './Pagination.module.css';
 

@@ -1,9 +1,9 @@
-import { useGetCategoriesQuery } from '../../api/productsApi.js';
+import { useGetCategoriesQuery } from '../../../api/productsApi.js';
 
-import { formatCategoryName } from '../../utils/formatCategoryName.js';
+import { formatCategoryName } from '../../../utils/formatCategoryName.js';
 
-import ErrorState from '../../../../shared/components/states/ErrorState.jsx';
-import LoadingState from '../../../../shared/components/states/LoadingState.jsx';
+import ErrorState from '../../../../../shared/components/states/ErrorState.jsx';
+import LoadingState from '../../../../../shared/components/states/LoadingState.jsx';
 
 import styles from './CategoriesSidebar.module.css';
 import { useState } from 'react';

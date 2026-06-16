@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 
-import { calculateDiscountPrice } from '../../utils/calculateDiscountPrice.js';
+import { calculateOriginalPrice } from '../../../utils/calculateOriginalPrice.js';
 
 import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }) {
   const [isAdded, setIsAdded] = useState(false);
 
-  const discountedPrice = calculateDiscountPrice(
+  const originalPrice = calculateOriginalPrice(
     product.price,
     product.discountPercentage,
   );
@@ -44,10 +44,10 @@ export default function ProductCard({ product }) {
 
           <div className={styles.bottomRow}>
             <div className={styles.priceContainer}>
-              <span className={styles.currentPrice}>${discountedPrice}</span>
+              <span className={styles.currentPrice}>${product.price}</span>
 
               {hasDiscount && (
-                <span className={styles.oldPrice}>${product.price}</span>
+                <span className={styles.oldPrice}>${originalPrice}</span>
               )}
             </div>
 
