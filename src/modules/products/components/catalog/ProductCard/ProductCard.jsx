@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 
 import { Icons } from '../../../../../shared/constants/icons.js';
+import { renderRatingStars } from '../../../../../shared/utils/renderRatingStars.js';
 import { calculateOriginalPrice } from '../../../utils/calculateOriginalPrice.js';
 import styles from './ProductCard.module.css';
 
@@ -37,7 +38,7 @@ export default function ProductCard({ product }) {
           />
 
           <div className={styles.ratingBadge}>
-            {Icons.star} {product.rating}
+            {renderRatingStars(product.rating)}
           </div>
         </div>
 

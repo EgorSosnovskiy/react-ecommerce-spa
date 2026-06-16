@@ -48,22 +48,33 @@ Training project built during internship for practicing modern frontend developm
 - Pull Request workflow
 - Production deployment
 
-## Authentication
+## Functionality
 
-The application uses the DummyJSON authentication API.
+### Overview
 
-Test credentials from DummyJSON:
+A responsive e-commerce application powered by DummyJSON.  
+The application includes authentication, product catalog browsing with search, filtering, sorting, pagination, and detailed product view functionality.
 
-- Username: `emilys`
-- Password: `emilyspass`
+### Authentication
 
-Authentication features:
+- Login via DummyJSON credentials
+- Client-side form validation
+- Password visibility toggle
+- Error handling and session persistence
 
-- Username and password validation before form submission.
-- Password visibility toggle.
-- Inline validation error messages.
-- Authentication error notifications.
-- Session persistence after page refresh.
+### Catalog
+
+- Product listing with image, title, price, and rating
+- Search, category filtering, sorting, and pagination
+- URL-driven state management (filters persist on refresh)
+- Loading and error states for API requests
+
+### Product Details
+
+- Full product information display
+- Image gallery with navigation controls
+- Breadcrumb navigation and back navigation support
+- Pricing details and customer reviews
 
 ## How to Run Project
 

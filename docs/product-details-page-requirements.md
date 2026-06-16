@@ -31,7 +31,7 @@ API provider:
 
 Reference:
 
-![Product Details Page UI](../images/product-details-page.png)
+![Product Details Page UI](../public/images/product-details-page.png)
 
 ---
 

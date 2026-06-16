@@ -69,7 +69,7 @@ API provider:
 
 Reference:
 
-![Catalog Page UI](../images/catalog-page.png)
+![Catalog Page UI](../public/images/catalog-page.png)
 
 ---
 
