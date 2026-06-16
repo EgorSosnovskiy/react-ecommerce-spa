@@ -10,11 +10,11 @@ import {
   useCatalogParams,
   useCatalogProducts,
 } from 'modules/products/index.js';
-
 import EmptyState from 'shared/components/EmptyState.jsx';
 import ErrorState from 'shared/components/ErrorState.jsx';
 import LoadingState from 'shared/components/LoadingState.jsx';
 
+import { Icons } from '../../shared/constants/icons.js';
 import styles from './CatalogPage.module.css';
 
 export default function CatalogPage() {
@@ -29,7 +29,7 @@ export default function CatalogPage() {
   }, [params, isLoading]);
 
   if (isLoading) {
-    return <LoadingState message="⏳ Loading products..." />;
+    return <LoadingState message={`${Icons.loading} Loading products..`} />;
   }
 
   if (error) {

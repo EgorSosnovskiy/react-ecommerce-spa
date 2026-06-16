@@ -1,12 +1,11 @@
 import { createBrowserRouter, Navigate } from 'react-router';
 
-import { ROUTES } from 'shared/constants/routes.js';
-
-import LoginPage from 'pages/LoginPage/LoginPage.jsx';
 import CatalogLayout from 'pages/CatalogLayout/CatalogLayout.jsx';
 import CatalogPage from 'pages/CatalogPage/CatalogPage.jsx';
-import ProductDetailsPage from 'pages/ProductDetailsPage/ProductDetailsPage.jsx';
+import LoginPage from 'pages/LoginPage/LoginPage.jsx';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage.jsx';
+import ProductDetailsPage from 'pages/ProductDetailsPage/ProductDetailsPage.jsx';
+import { ROUTES } from 'shared/constants/routes.js';
 
 export const router = createBrowserRouter([
   {

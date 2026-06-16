@@ -9,9 +9,8 @@ import {
   ProductReviews,
   useGetProductByIdQuery,
 } from 'modules/products';
-
-import LoadingState from 'shared/components/LoadingState.jsx';
 import ErrorState from 'shared/components/ErrorState.jsx';
+import LoadingState from 'shared/components/LoadingState.jsx';
 
 import styles from './ProductDetailsPage.module.css';
 

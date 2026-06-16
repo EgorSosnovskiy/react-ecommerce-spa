@@ -1,5 +1,4 @@
 import ReviewCard from '../ReviewCard/ReviewCard.jsx';
-
 import styles from './ProductReviews.module.css';
 
 export default function ProductReviews({ reviews }) {

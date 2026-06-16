@@ -1,5 +1,4 @@
 import { renderRatingStars } from '../../../../../shared/utils/renderRatingStars.js';
-
 import styles from './ReviewCard.module.css';
 
 export default function ReviewCard({ review }) {

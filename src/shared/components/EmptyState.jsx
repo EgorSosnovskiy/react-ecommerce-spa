@@ -1,3 +1,4 @@
+import { Icons } from '../constants/icons.js';
 import styles from './State.module.css';
 
 export default function EmptyState({
@@ -5,7 +6,9 @@ export default function EmptyState({
 }) {
   return (
     <div className={styles.state}>
-      <h2>📦 {message}.</h2>
+      <h2>
+        {Icons.empty} {message}.
+      </h2>
     </div>
   );
 }

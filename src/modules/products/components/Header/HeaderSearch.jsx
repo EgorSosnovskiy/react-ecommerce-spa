@@ -1,5 +1,5 @@
+import { Icons } from '../../../../shared/constants/icons.js';
 import useCatalogParams from '../../hooks/useCatalogParams.js';
-
 import styles from './HeaderSearch.module.css';
 
 export default function HeaderSearch() {
@@ -9,7 +9,7 @@ export default function HeaderSearch() {
     <div className={styles.search}>
       <input
         type="text"
-        placeholder="🔍"
+        placeholder={Icons.search}
         value={params.q}
         onChange={(event) => actions.setSearch(event.target.value)}
       />

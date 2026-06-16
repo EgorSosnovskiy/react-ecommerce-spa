@@ -1,15 +1,15 @@
-import HeaderSearch from './HeaderSearch.jsx';
-import HeaderNavigation from './HeaderNavigation.jsx';
-import HeaderActions from './HeaderActions.jsx';
-
+import { Icons } from '../../../../shared/constants/icons.js';
 import styles from './Header.module.css';
+import HeaderActions from './HeaderActions.jsx';
+import HeaderNavigation from './HeaderNavigation.jsx';
+import HeaderSearch from './HeaderSearch.jsx';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <div className={styles.logoIcon}>👌</div>
+          <div className={styles.logoIcon}>{Icons.ok}</div>
 
           <div className={styles.logoText}>
             <p>2ND</p>

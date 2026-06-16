@@ -1,5 +1,4 @@
 import { calculateOriginalPrice } from '../../../utils/calculateOriginalPrice.js';
-
 import styles from './ProductPriceCard.module.css';
 
 export default function ProductPriceCard({ product }) {

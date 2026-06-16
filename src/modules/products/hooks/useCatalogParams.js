@@ -1,4 +1,4 @@
-import { useSearchParams, useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate, useSearchParams } from 'react-router';
 
 export default function useCatalogParams() {
   const [searchParams, setSearchParams] = useSearchParams();

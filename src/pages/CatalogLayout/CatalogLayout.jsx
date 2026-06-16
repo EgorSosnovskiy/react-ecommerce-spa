@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
 
-import { Header, Footer } from 'modules/products';
+import { Footer, Header } from 'modules/products';
 
 import styles from './CatalogLayout.module.css';
 

@@ -1,10 +1,9 @@
+import useDebounce from '../../../shared/hooks/useDebounce.js';
 import {
-  useGetProductsQuery,
   useGetProductsByCategoryQuery,
+  useGetProductsQuery,
   useSearchProductsQuery,
 } from '../api/productsApi.js';
-
-import useDebounce from '../../../shared/hooks/useDebounce.js';
 
 export default function useCatalogProducts({ q, category, sort, page, limit }) {
   const skip = (page - 1) * limit;

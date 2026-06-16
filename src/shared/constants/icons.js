@@ -1,0 +1,17 @@
+export const Icons = {
+  loading: '⏳',
+  error: '⚠️',
+  search: '🔍',
+  cart: '🛒',
+  star: '⭐',
+  empty: '📦',
+  ok: '👌',
+  favorites: '💖',
+  heart: '♡',
+  door: '🚪',
+  human: '🙎‍♂️',
+  lock: '🔒',
+  eye: '👁️',
+  leftArrow: '←',
+  rightArrow: '→',
+};
