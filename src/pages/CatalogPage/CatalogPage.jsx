@@ -1,17 +1,19 @@
 import { useLayoutEffect } from 'react';
 
-import useCatalogParams from '../../hooks/useCatalogParams.js';
-import useCatalogProducts from '../../hooks/useCatalogProducts.js';
+import {
+  Breadcrumbs,
+  CategoriesSidebar,
+  CategoryTabs,
+  Pagination,
+  ProductsGrid,
+  SortSelect,
+  useCatalogParams,
+  useCatalogProducts,
+} from 'modules/products/index.js';
 
-import ProductsGrid from '../../components/catalog/ProductsGrid/ProductsGrid.jsx';
-import ErrorState from '../../../../shared/components/states/ErrorState.jsx';
-import EmptyState from '../../../../shared/components/states/EmptyState.jsx';
-import SortSelect from '../../components/catalog/SortSelect/SortSelect.jsx';
-import Pagination from '../../components/catalog/Pagination/Pagination.jsx';
-import LoadingState from '../../../../shared/components/states/LoadingState.jsx';
-import CategoryTabs from '../../components/catalog/CategoryTabs/CategoryTabs.jsx';
-import Breadcrumbs from '../../components/catalog/CatalogBreadcrumbs/CatalogBreadcrumbs.jsx';
-import CategoriesSidebar from '../../components/catalog/CategoriesSidebar/CategoriesSidebar.jsx';
+import EmptyState from 'shared/components/EmptyState.jsx';
+import ErrorState from 'shared/components/ErrorState.jsx';
+import LoadingState from 'shared/components/LoadingState.jsx';
 
 import styles from './CatalogPage.module.css';
 

@@ -1,14 +1,16 @@
 import { useState } from 'react';
+
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 
-import { useLoginMutation } from '../api/authApi';
-import { setCredentials } from '../store/authSlice';
-import { saveAuthData } from '../utils/authStorage';
-import { ROUTES } from '../../../shared/constants/routes';
-
 import { toast } from 'react-toastify';
+
+import { ROUTES } from 'shared/constants/routes';
+
+import { useLoginMutation } from '../api/authApi.js';
+import { setCredentials } from '../store/authSlice.js';
+import { saveAuthData } from '../utils/authStorage.js';
 
 import styles from './LoginForm.module.css';
 
