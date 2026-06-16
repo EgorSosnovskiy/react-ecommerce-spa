@@ -1,0 +1,42 @@
+.page {
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  margin-top: 24px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1200px) {
+  .page {
+    padding: 24px;
+  }
+
+  .content {
+    display: grid;
+
+    grid-template-columns: minmax(350px, 480px) 1fr 320px;
+
+    gap: 32px;
+
+    align-items: start;
+  }
+}

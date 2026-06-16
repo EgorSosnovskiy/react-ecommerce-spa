@@ -3,15 +3,15 @@ import { useLayoutEffect } from 'react';
 import useCatalogParams from '../../hooks/useCatalogParams.js';
 import useCatalogProducts from '../../hooks/useCatalogProducts.js';
 
-import ProductsGrid from '../../components/ProductsGrid/ProductsGrid.jsx';
+import ProductsGrid from '../../components/catalog/ProductsGrid/ProductsGrid.jsx';
 import ErrorState from '../../../../shared/components/states/ErrorState.jsx';
 import EmptyState from '../../../../shared/components/states/EmptyState.jsx';
-import SortSelect from '../../components/SortSelect/SortSelect.jsx';
-import Pagination from '../../components/Pagination/Pagination.jsx';
+import SortSelect from '../../components/catalog/SortSelect/SortSelect.jsx';
+import Pagination from '../../components/catalog/Pagination/Pagination.jsx';
 import LoadingState from '../../../../shared/components/states/LoadingState.jsx';
-import CategoryTabs from '../../components/CategoryTabs/CategoryTabs.jsx';
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.jsx';
-import CategoriesSidebar from '../../components/CategoriesSidebar/CategoriesSidebar.jsx';
+import CategoryTabs from '../../components/catalog/CategoryTabs/CategoryTabs.jsx';
+import Breadcrumbs from '../../components/catalog/CatalogBreadcrumbs/CatalogBreadcrumbs.jsx';
+import CategoriesSidebar from '../../components/catalog/CategoriesSidebar/CategoriesSidebar.jsx';
 
 import styles from './CatalogPage.module.css';
 

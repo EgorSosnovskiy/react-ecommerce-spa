@@ -1,7 +1,9 @@
-import { useSearchParams } from 'react-router';
+import { useSearchParams, useLocation, useNavigate } from 'react-router';
 
 export default function useCatalogParams() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const params = {
     section: searchParams.get('section') || 'women',
@@ -42,11 +44,27 @@ export default function useCatalogParams() {
   };
 
   const setSearch = (q) => {
-    updateParams({
+    const updates = {
       q,
       category: null,
       page: 1,
-    });
+    };
+
+    if (location.pathname !== '/catalog') {
+      const params = new URLSearchParams();
+
+      Object.entries(updates).forEach(([key, value]) => {
+        if (value !== null && value !== undefined && value !== '') {
+          params.set(key, String(value));
+        }
+      });
+
+      navigate(`/catalog?${params.toString()}`);
+
+      return;
+    }
+
+    updateParams(updates);
   };
 
   const setSort = (sort) => {
