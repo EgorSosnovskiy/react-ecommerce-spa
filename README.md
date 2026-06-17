@@ -1,21 +1,32 @@
 # React E-Commerce SPA
 
-[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://react-ecommerce-spa-tau.vercel.app/)
+Responsive e-commerce SPA built during internship using React, Redux Toolkit, RTK Query, and Webpack.
 
-Training project built during internship for practicing modern frontend development.
+The application provides authentication, product catalog browsing, search, filtering, sorting, pagination, and detailed product pages powered by the DummyJSON API.
+
+## Live Demo
+
+[Open Application](https://react-ecommerce-spa-tau.vercel.app/)
 
 ## Tech Stack
+
+### Core Technologies
 
 - React 19
 - React Router 7
 - Redux Toolkit
 - RTK Query
+- React Hook Form
+- React Toastify
+- DummyJSON API
+
+### Development Tools
+
 - Webpack 5
 - Babel
 - ESLint
 - Prettier
 - Husky
-- DummyJSON API
 
 ## General Project Requirements
 
@@ -48,35 +59,48 @@ Training project built during internship for practicing modern frontend developm
 
 - Source code hosted on GitHub
 - Pull Request workflow
-- Production deployment
+- Production deployment on Vercel
 
 ## Functionality
 
-### Overview
-
-A responsive e-commerce application powered by DummyJSON.  
-The application includes authentication, product catalog browsing with search, filtering, sorting, pagination, and detailed product view functionality.
-
 ### Authentication
 
-- Login via DummyJSON credentials
-- Client-side form validation
+- Login using DummyJSON authentication API
+- Client-side form validation with React Hook Form
 - Password visibility toggle
-- Error handling and session persistence
+- Session persistence via Local Storage
+- Logout functionality
 
-### Catalog
+### Product Catalog
 
 - Product listing with image, title, price, and rating
-- Search, category filtering, sorting, and pagination
-- URL-driven state management (filters persist on refresh)
-- Loading and error states for API requests
+- Search by product title
+- Category filtering
+- Product sorting
+- Pagination
+- URL-driven state management
+- Loading, empty, and error states
 
 ### Product Details
 
-- Full product information display
-- Image gallery with navigation controls
-- Breadcrumb navigation and back navigation support
-- Pricing details and customer reviews
+- Detailed product information
+- Product image gallery with thumbnails
+- Image navigation controls
+- Breadcrumb navigation
+- Back navigation
+- Product pricing information
+- Customer reviews section
+
+## Lighthouse Audit
+
+The application was audited using Google Lighthouse.
+
+- Performance: 94
+- Accessibility: 96
+- Best Practices: 100
+- SEO: 100
+
+![Lighthouse Screenshot](public/images/lighthouse-report.png)
 
 ## How to Run Project
 

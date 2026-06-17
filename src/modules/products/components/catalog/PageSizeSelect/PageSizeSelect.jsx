@@ -5,6 +5,7 @@ export default function PageSizeSelect({ value, onChange }) {
     <select
       className={styles.select}
       value={value}
+      aria-label="Items per page"
       onChange={(event) => onChange(Number(event.target.value))}
     >
       <option value="12">12</option>
